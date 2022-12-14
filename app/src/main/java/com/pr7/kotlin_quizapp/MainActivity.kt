@@ -24,33 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         mainViewModel = ViewModelProvider(this@MainActivity).get(MainViewModel::class.java)
 
-        colorStateList = ColorStateList(
-            arrayOf(
-                intArrayOf(android.R.attr.state_enabled),
-                ),
-                intArrayOf(
-                    Color.GREEN,
 
-                )
-        )
-        colorStateList2 = ColorStateList(
-            arrayOf(
-                intArrayOf(android.R.attr.state_enabled),
-            ),
-            intArrayOf(
-                Color.RED,
-
-                )
-        )
-        colorStateList3 = ColorStateList(
-            arrayOf(
-                intArrayOf(android.R.attr.state_enabled),
-            ),
-            intArrayOf(
-                Color.BLACK,
-
-                )
-        )
         binding.radiogroup1.setOnCheckedChangeListener { radioGroup, i ->
 
             when (i) {
@@ -126,6 +100,34 @@ class MainActivity : AppCompatActivity() {
         binding.radiogroup1.visibility = View.VISIBLE
         binding.textviewquestion.visibility = View.VISIBLE
         binding.buttonnextquestion.text = "Next"
+
+        colorStateList = ColorStateList(
+            arrayOf(
+                intArrayOf(android.R.attr.state_enabled),
+            ),
+            intArrayOf(
+                Color.GREEN,
+
+                )
+        )
+        colorStateList2 = ColorStateList(
+            arrayOf(
+                intArrayOf(android.R.attr.state_enabled),
+            ),
+            intArrayOf(
+                Color.RED,
+
+                )
+        )
+        colorStateList3 = ColorStateList(
+            arrayOf(
+                intArrayOf(android.R.attr.state_enabled),
+            ),
+            intArrayOf(
+                Color.BLACK,
+
+                )
+        )
     }
 
 }
